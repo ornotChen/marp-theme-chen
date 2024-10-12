@@ -1,0 +1,351 @@
+/* @theme Chen */
+
+@charset "UTF-8";
+/*
+ * @auto-scaling true
+ * @size 16:9 1280px 720px
+ * @size 4:3 960px 720px
+ */
+
+@import url("https://fonts.googleapis.com/css2?family=Afacad+Flux:wght@100..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/styles/tomorrow-night-blue.min.css");
+svg[data-marp-fitting="svg"] {
+  max-height: 580px;
+}
+
+h3,
+h4,
+h5,
+h6 {
+  margin: 0.4em 0;
+  font-weight: 600;
+}
+h1 strong,
+h3 strong,
+h4 strong,
+h5 strong,
+h6 strong {
+  font-weight: inherit;
+  margin: 0 0 0 0;
+}
+
+h1 {
+  font-size: 2.5em;
+  font-weight: 600;
+  line-height: 1em;
+  margin-bottom: 35px;
+  color: #3e6c9a;
+}
+
+h2 {
+  font-size: 1.8em;
+  font-weight: 700; /* 设置所有 <strong> 元素的字重 */
+  color: #ffffff;
+  position: absolute; /* 使 h2 元素固定在页面顶部 */
+  top: 1.94vh; /* 距离页面顶端 10px */
+  left: 1em; /* 将 h2 水平居中 */
+  background: linear-gradient(90deg, #0b083b, #39446c);
+  margin: 0 0 0 0;
+  padding: 0.35em 0.5em; /* 添加内边距，使框看起来更美观 */
+  border: 0px solid #3e6c9a; /* 为框设置边框 */
+  border-radius: 0 0 0.5em 0.5em; /* 设置圆角边框 */
+  box-shadow: 0em 0.1em 0.04em #aebcc4; /* 添加阴影，让 h2 元素看起来浮起来 */
+  z-index: 1000; /* 确保 h2 元素在其他元素之上 */
+}
+
+h2 strong {
+  font-weight: 700; /* 设置所有 <strong> 元素的字重 */
+  font-size: 100%;
+  text-shadow: inherit;
+  color: #fbe253;
+}
+
+h3 {
+  font-size: 1.4em;
+  color: #3e6c9a;
+}
+
+h4 {
+  font-size: 1.1em;
+  color: #3e6c9a;
+}
+
+h5 {
+  font-size: 1em;
+}
+
+h6 {
+  font-size: 1em;
+}
+
+p,
+blockquote {
+  margin: 0.5em 0 0.5em 0;
+  padding-left: 0.1em;
+}
+
+ul,
+ol {
+  padding-left: 1em;
+  margin: 0em 0 0 0;
+}
+ul > li,
+ol > li {
+  margin: 0.3em 0 0 0;
+}
+ul > li > p,
+ol > li > p {
+  margin: 0.3em 0 0 0;
+}
+
+code {
+  display: inline-block;
+  font-family: "Roboto Mono", "Noto Sans JP", monospace;
+  font-size: 0.6em;
+  line-height: 1.5em;
+  letter-spacing: 0;
+  padding-inline: 0.4em;
+  border-radius: 0.3em;
+  vertical-align: middle;
+  background: var(--color-foreground);
+  color: var(--color-background);
+}
+
+pre {
+  display: block;
+  margin: 1m 0 0 0;
+  min-height: 1em;
+  overflow: visible;
+}
+pre code {
+  box-sizing: border-box;
+  margin: 0em 0em;
+  min-width: 100%;
+  padding: 1em 1.5em;
+  font-size: 0.6em;
+  border-radius: 0.5em;
+  box-shadow: 0.1em 0.1em 0.1em rgba(0, 15, 111, 0.506);
+}
+pre code svg[data-marp-fitting="svg"] {
+  max-height: calc(580px - 1em);
+}
+
+blockquote {
+  margin: 0.5em 0;
+  padding: 0 0.4em;
+  position: relative;
+  border-left: 0.3em solid #3e6c9a;
+  background-color: #d5d5d540;
+}
+
+blockquote > *:first-child {
+  margin-top: 0em;
+}
+
+mark {
+  background: transparent;
+}
+
+table {
+  border-spacing: 0;
+  border-collapse: collapse;
+  border: 2px solid;
+  margin: 1em 0 0 0;
+  font-size: 0.8em;
+}
+table th,
+table td {
+  padding: 0.3em 0.5em;
+  border-width: 1px;
+  border-style: solid;
+}
+
+header {
+  position: absolute; /* 保持绝对定位 */
+  top: 2vh; /* 设置距离页面顶部的距离 */
+  right: 0em; /* 设置距离页面右侧的距离 */
+  box-sizing: content-box;
+  font-size: 1.8em;
+  font-weight: 700;
+  margin: 0 0 0 0;
+  padding: 0.25em 0.2em 0.3em 0.3em; /* 为了视觉上的美观，增加一些 padding */
+  color: #6d969b62; /* 文字颜色为白色，以便在深色背景上显眼 */
+  border-radius: 0.3em; /* 给 header 添加一点圆角效果 */
+  z-index: 1000; /* 确保在其他元素上面 */
+}
+
+footer {
+  box-sizing: border-box;
+  font-size: 50%;
+  height: 4em;
+  line-height: 4em;
+  overflow: hidden;
+  padding: 0.4em 0em;
+  position: absolute;
+  left: 3.5em;
+  right: 0;
+  bottom: 0.1em;
+}
+
+section::after {
+  box-sizing: border-box;
+  font-size: 60%;
+  height: 4em;
+  line-height: 4em;
+  overflow: hidden;
+  padding: 0.4em 1.6em;
+  position: absolute;
+  right: 0em;
+  bottom: 0.1em;
+  font-size: 50%;
+}
+
+section:not(.lead):before {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 2vh;
+  content: "";
+  margin-bottom: 100px;
+  background: linear-gradient(90deg, #060038, #95c6dd 80%);
+}
+
+section {
+  /* bg image can be replaced */
+  background-image: url("../../MarpThemes/saru.png");
+  background-repeat: no-repeat;
+  background-position: 0.9em 98%;
+  background-size: 0.6em auto, 100% 100%;
+  background-color: var(--color-background);
+  color: var(--color-foreground);
+  font-family: "Poppins";
+  font-weight: 400;
+  font-size: 23px;
+  height: 720px;
+  line-height: 1.5em;
+  letter-spacing: -0.017em;
+  word-spacing: 0.02em;
+  padding: 3.8em 2.5em;
+  width: 1280px;
+  word-wrap: break-word;
+  --color-background: rgb(255, 255, 255);
+  --color-background-stripe: rgba(144, 166, 193, 0.03);
+  --color-foreground: #000000b2;
+  --color-dimmed: #33619a;
+  --color-highlight: #053071;
+}
+
+strong {
+  font-weight: 500; /* 设置所有 <strong> 元素的字重 */
+  font-size: 110%;
+  text-shadow: 0 0.05em 0.05em rgba(255, 255, 255, 0.921);
+  color: #05466cc9;
+}
+
+section a,
+f section mark {
+  color: var(--color-highlight);
+}
+
+section footer,
+section section::after {
+  color: var(--color-dimmed);
+}
+section table th,
+section table td {
+  border-color: var(--color-foreground);
+}
+section table thead th {
+  background: #204e6d;
+  color: var(--color-background);
+  font-weight: 400;
+}
+section table tbody > tr:nth-child(odd) td,
+section table tbody > tr:nth-child(odd) th {
+  background: var(--color-background-stripe, transparent);
+}
+section > *:first-child,
+section > header:first-child + * {
+  margin-top: 0;
+}
+section.lead {
+  --color-background: #003981;
+  --color-background-stripe: rgba(255, 255, 255, 0.1);
+  --color-foreground: white;
+  --color-dimmed: #ccd7e6;
+  --color-highlight: #81d4fa;
+  background-image: url("https://i.imgur.com/yyGImyN.png"),
+    linear-gradient(115deg, #080058, #008bcd);
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+}
+section.lead h1,
+section.lead h2,
+section.lead h3,
+section.lead h4,
+section.lead h5,
+section.lead h6 {
+  text-align: center;
+}
+section.lead h1 svg[data-marp-fitting="svg"],
+section.lead h2 svg[data-marp-fitting="svg"],
+section.lead h3 svg[data-marp-fitting="svg"],
+section.lead h4 svg[data-marp-fitting="svg"],
+section.lead h5 svg[data-marp-fitting="svg"],
+section.lead h6 svg[data-marp-fitting="svg"] {
+  --preserve-aspect-ratio: xMidYMid meet;
+}
+section.lead p {
+  text-align: center;
+}
+section.lead blockquote > h1,
+section.lead blockquote > h2,
+section.lead blockquote > h3,
+section.lead blockquote > h4,
+section.lead blockquote > h5,
+section.lead blockquote > h6,
+section.lead blockquote > p {
+  text-align: left;
+}
+section.lead
+  blockquote
+  svg[data-marp-fitting="svg"]:not([data-marp-fitting-math]) {
+  --preserve-aspect-ratio: xMinYMin meet;
+}
+section.lead ul > li > p,
+section.lead ol > li > p {
+  text-align: left;
+}
+section.lead table {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.katex {
+  font-weight: 400;
+  line-height: 1.5em;
+  padding: 0.1em 0.5em;
+  font-size: 1em; /* 调整为合适的大小 */
+  color: var(--color-foreground);
+  background-color: rgba(103, 103, 103, 0.03);
+  border-radius: 0.5em;
+}
+
+/*# sourceMappingURL=speee.css.map */
+.split-v {
+  display: flex;
+  align-items: flex-start;
+}
+
+.split-v > * {
+  margin-right: 3em;
+}
+
+.split-h {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
