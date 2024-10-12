@@ -1,7 +1,7 @@
 # marp-theme-chen
 
 I'm not good at writing css.  
-Feel free to use or modify this theme 😄
+Feel free to use or modify this theme😊
 
 ### [Marp-vscode](https://github.com/marp-team/marp-vscode/tree/main) / [Marpit](https://github.com/marp-team/marpit)
 
